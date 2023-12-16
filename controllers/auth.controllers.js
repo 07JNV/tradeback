@@ -20,10 +20,11 @@ const signup = async (req, res) => {
       email: email,
       password: hashedpassword,
       totalamount: 1000000,
+      pre:{test:"test"},
 
 
     });
-
+  console.log(result);
 
 
     const token = jwt.sign({ email: result.email, id: result._id }, SECRET_KEY);
